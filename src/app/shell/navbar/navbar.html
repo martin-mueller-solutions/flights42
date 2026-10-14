@@ -12,4 +12,8 @@
       width="150"
       height="46" />
   </div>
+  <div class="navbar-actions">
+    {{ flightStore.from() }} to {{ flightStore.to() }}:
+    {{ flightStore.flights().length }} flights
+  </div>
 </nav>

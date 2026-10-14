@@ -5,6 +5,8 @@ import {
   inject,
 } from '@angular/core';
 
+import { FlightStore } from '../../domains/ticketing/feature-booking/flight-search/flight-store';
+
 @Component({
   selector: 'app-navbar',
   imports: [],
@@ -15,6 +17,7 @@ export class Navbar {
   private sidebarVisible = false;
 
   private document = inject(DOCUMENT);
+  protected readonly flightStore = inject(FlightStore);
 
   protected sidebarToggle() {
     const body = this.document.getElementsByTagName('body')[0];
